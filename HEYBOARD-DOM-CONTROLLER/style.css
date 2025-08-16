@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgba(255, 50, 100, 0.5);
+    color:rgba(255, 100, 150, 0.8);
+    text-align: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+h3{
+    color: rgba(225,225,225,1);
+    font-family:monospace;
+}
+
+span{
+    color: rgba(0,255,0,0.3);
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 20px;
+}
+main{
+    border: 5px solid;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.container{
+    height: 250px;
+    border: 3px solid rgba(255,255,255,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+@keyframes moveRightAnimation {
+    from {transform: translateX(0);}
+    to {transform: translateX(50px);}
+}
+
+.move-right{
+    animation: moveRightAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes moveLeftAnimation{
+    from { transform: translateX(0);}
+    to { transform: translateX(-50px);}
+}
+
+.move-left{
+    animation: moveLeftAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes jumpAnimation {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-40px);}
+    100% { transform: translateY(0);}
+}
+
+.jump {
+    animation: jumpAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes crouchanimation {
+    from {transform: scaleY(1);}
+    to {transform: scaleY(0.5);}
+}
+
+.crouch{
+    animation: crochAnimation 0.2 ease-in-out forwards;
+}
+
+.crouching {
+    transform: scaleY(0.5) !important;
+    transition: transform 0.2s ease-in-out;
+}
